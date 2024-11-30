@@ -1,7 +1,25 @@
 package initializers
 
-import "sistem-manajemen-sekolah/models"
+import (
+	"log"
+	"sistem-manajemen-sekolah/models"
+)
 
 func SyncDatabase() {
-	DB.AutoMigrate(&models.User{})
+	err := DB.AutoMigrate(
+		&models.User{},
+		&models.Siswa{},
+		&models.Guru{},
+		&models.OrangTua{},
+		&models.Absensi{},
+		&models.AbsensiDetail{},
+		&models.Jadwal{},
+		&models.Kelas{},
+		&models.Keuangan{},
+		&models.Pengumuman{},
+	)
+
+	if err != nil {
+		log.Fatalf("Error migrating tables: %v", err)
+	}
 }
