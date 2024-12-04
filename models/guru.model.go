@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Guru struct {
-	ID            string    `json:"id" gorm:"type:uuid;primary_key"`
+	ID            string    `json:"id" gorm:"type:uuid;primaryKey"`
 	UserID        string    `json:"user_id" gorm:"type:uuid;not null"`
 	Nama          string    `json:"nama" gorm:"type:varchar(255);not null"`
 	MataPelajaran string    `json:"mata_pelajaran" gorm:"type:varchar(255);not null"`

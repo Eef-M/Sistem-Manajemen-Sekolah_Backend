@@ -12,7 +12,7 @@ const (
 )
 
 type Absensi struct {
-	ID        string    `json:"id" gorm:"type:uuid;primary_key"`
+	ID        string    `json:"id" gorm:"type:uuid;primaryKey"`
 	KelasID   string    `json:"kelas_id" gorm:"type:uuid;not null"`
 	Tanggal   time.Time `'json:"tanggal" gorm:"type:date;not null"`
 	CreatedAt time.Time `json:"created_at" gorm:"autoCreateTime"`
@@ -23,7 +23,7 @@ type Absensi struct {
 }
 
 type AbsensiDetail struct {
-	ID        string          `json:"id" gorm:"type:uuid;primary_key"`
+	ID        string          `json:"id" gorm:"type:uuid;primaryKey"`
 	AbsensiID string          `json:"absensi_id" gorm:"type:uuid;not null"`
 	Status    StatusKehadiran `json:"status" gorm:"type:status_kehadiran;not null"`
 	CreatedAt time.Time       `json:"created_at" gorm:"autoCreateTime"`

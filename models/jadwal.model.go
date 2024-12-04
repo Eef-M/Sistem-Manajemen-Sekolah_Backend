@@ -14,7 +14,7 @@ const (
 )
 
 type Jadwal struct {
-	ID            string    `json:"id" gorm:"type:uuid;primary_key"`
+	ID            string    `json:"id" gorm:"type:uuid;primaryKey"`
 	KelasID       string    `json:"kelas_id" gorm:"type:uuid;not null"`
 	GuruID        string    `json:"guru_id" gorm:"type:uuid;not null"`
 	MataPelajaran string    `json:"mata_pelajaran" gorm:"type:varchar(255);not null"`

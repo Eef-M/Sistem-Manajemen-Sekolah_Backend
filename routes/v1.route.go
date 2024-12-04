@@ -12,4 +12,5 @@ func InitRoute(app *gin.Engine) {
 
 	route.GET("/testing", controllers.Testing)
 	route.POST("/login", auth.Login)
+	route.POST("/register", auth.Register)
 }

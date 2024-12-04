@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Pengumuman struct {
-	ID        string    `json:"id" gorm:"type:uuid;primary_key"`
+	ID        string    `json:"id" gorm:"type:uuid;primaryKey"`
 	Judul     string    `json:"judul" gorm:"type:varchar(255);not null"`
 	Konten    string    `json:"konten" gorm:"type:text;not null"`
 	Tanggal   time.Time `json:"tanggal" gorm:"type:date;not null"`
