@@ -5,12 +5,12 @@ import "time"
 type StatusPembayaran string
 
 const (
-	Lunas      StatusPembayaran = "belum"
+	Lunas      StatusPembayaran = "lunas"
 	BelumLunas StatusPembayaran = "belum lunas"
 )
 
 type Keuangan struct {
-	ID              string    `json:"id" gorm:"type:uuid;primary_key"`
+	ID              string    `json:"id" gorm:"type:uuid;primaryKey"`
 	SiswaID         string    `json:"siswa_id" gorm:"type:uuid;not null"`
 	JenisPembayaran string    `json:"jenis_pembayaran" gorm:"type:varchar(255);not null"`
 	Status          string    `json:"status" gorm:"type:status_pembayaran;not null"`
